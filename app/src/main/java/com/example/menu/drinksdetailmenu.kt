@@ -12,7 +12,7 @@ open class DrinksCokeMenu(name:String) {
     open fun drinksDetailMenu(order4: Int){
 
         println("${name}은(는) 1병에 2,000원 입니다")
-        println("뒤로가기를 원하시면 0번을 눌러주세요")
+        println("뒤로가기를 원하시면 0번을 입력해주세요")
         while(true) {
             var order4_1 = readLine()!!.toInt()
             if(order4_1 == 0) {

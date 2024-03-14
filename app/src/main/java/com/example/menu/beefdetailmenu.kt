@@ -10,7 +10,7 @@ open class BeefChunkflattailMenu(name:String) {
     open fun detailBeefMenu(order2:Int){
 
         println("${name}은(는) 1인분에 15,000원 입니다")
-        println("뒤로가기를 원하시면 0번을 눌러주세요")
+        println("뒤로가기를 원하시면 0번을 입력해주세요")
         while(true) {
             var order2_1 = readLine()!!.toInt()
             if(order2_1 == 0) {
@@ -26,7 +26,7 @@ open class BeefChunkflattailMenu(name:String) {
 class BeefOutsideskirtMenu(name: String) : BeefChunkflattailMenu(name) {
     override fun detailBeefMenu(order2: Int) {
         println("${name}은(는) 1인분에 18,000원 입니다")
-        println("뒤로가기를 원하시면 0번을 눌러주세요")
+        println("뒤로가기를 원하시면 0번을 입력해주세요")
         while(true) {
             var order2_1 = readLine()!!.toInt()
             if(order2_1 == 0) {

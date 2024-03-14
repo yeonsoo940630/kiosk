@@ -20,33 +20,42 @@ open class Menu {
         var drinks = DrinksMenu()
 
         while (true) {
-            println("아래 메뉴판을 보시고 메뉴를 골라 입력해주세요")
+            println("아래 메뉴판을 보시고 메뉴를 골라 숫자를 입력해주세요")
             println("1. 돼지고기")
             println("2. 소고기")
             println("3. 식사")
             println("4. 주류 및 음료")
             println("0. 종료")
-            var order = readLine()!!.toInt()
-            when (order) {
-                1 -> {
-                    pork.porkMenu(order)
-                }
 
-                2 -> {
-                    beef.beefMenu(order)
-                }
+            try {
+                var order = readLine()!!.toInt()
+                when (order) {
+                    1 -> {
+                        pork.porkMenu(order)
+                    }
 
-                3 -> {
-                    meal.mealMenu(order)
-                }
+                    2 -> {
+                        beef.beefMenu(order)
+                    }
 
-                4 -> {
-                    drinks.drinksMenu(order)
-                }
+                    3 -> {
+                        meal.mealMenu(order)
+                    }
 
-                0 -> {
-                    break
+                    4 -> {
+                        drinks.drinksMenu(order)
+                    }
+
+                    0 -> {
+                        break
+                    }
+                    else -> {
+                        println("메뉴에 있는 숫자를 입력하세요")
+                    }
                 }
+            }catch(e:java.lang.NumberFormatException) {
+                println("숫자를 입력하세요")
+
             }
         }
     }
@@ -62,8 +71,9 @@ class PorkMenu: Menu() {
         var psm = PorkJowlsMenu("항정살")
         var pdm = PorkDiaphpagmMenu("갈매기살")
 
+
         while (true) {
-            println("돼지고기 종류를 골라 입력해주세요")
+            println("돼지고기 종류를 골라 숫자를 입력해주세요")
             println("1. 삼겹살")
             println("2. 목살")
             println("3. 항정살")
@@ -104,7 +114,7 @@ class BeefMenu: Menu() {
             var brm = BeefRibMenu("갈비살")
             var bsm = BeefSirloinMenu("등심")
 
-            println("소고기 종류를 골라 입력해주세요")
+            println("소고기 종류를 골라 숫자를 입력해주세요")
             println("1. 안창살")
             println("2. 살치살")
             println("3. 갈비살")
@@ -143,7 +153,7 @@ class MealMenu: Menu() {
         var mrm = MealRiceMenu("공깃밥")
 
         while (true) {
-            println("식사 종류를 골라 입력해주세요")
+            println("식사 종류를 골라 숫자를 입력해주세요")
             println("1. 된장찌개")
             println("2. 냉면")
             println("3. 공깃밥")
@@ -176,7 +186,7 @@ class DrinksMenu: Menu() {
 
 
         while (true) {
-            println("음료 및 주류 종류를 골라 입력해주세요")
+            println("음료 및 주류 종류를 골라 숫자를 입력해주세요")
             println("1. 콜라")
             println("2. 사이다")
             println("0. 뒤로가기")

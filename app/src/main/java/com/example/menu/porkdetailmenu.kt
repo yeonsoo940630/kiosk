@@ -13,7 +13,7 @@ open class PorkBellyMenu(name:String) {
     fun detailPorkMenu(order1: Int){
 
         println("${name}은(는) 1인분에 10,000원 입니다")
-        println("뒤로가기를 원하시면 0번을 눌러주세요")
+        println("뒤로가기를 원하시면 0번을 입력해주세요")
         while(true) {
             var order1_1 = readLine()!!.toInt()
             if(order1_1 == 0) {
